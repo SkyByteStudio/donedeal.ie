@@ -1,0 +1,28 @@
+<div class="country-view">
+  <div class="flex-row">
+    <button class="country-view-go-back-button" ng-click="$ctrl.goBack()">Back</button>
+  </div>
+  <div class="flex-col">
+    <div class="flex-center">
+      <img class="country-view-image" ng-src="{{$ctrl.country.flag}}"/>
+    </div>
+    <div class="country-view-text-container">
+      <div class="country-text">{{ $ctrl.country.name }}</div>
+      <div class="country-text">Capital: {{ $ctrl.country.capital }}</div>
+      <div class="country-text">Population: {{ $ctrl.country.population }}</div>
+      <div class="country-text">Currencies: <span class="country-view-currency" ng-repeat="currency in $ctrl.country.currencies"> {{ currency.code }} </span> </div>
+      <div class="country-text">Languages: <span class="country-view-language" ng-repeat="language in $ctrl.country.languages"> {{ language.name }} </span> </div>
+    </div>
+
+    <div ng-if="$ctrl.country.borders">
+      <h4>Bordering Countries</h4>
+      <div class="country-view-border-container cursor">
+        <div ng-repeat="border in $ctrl.country.borders" class="country-view-border-row" ng-click="$ctrl.viewCountry(border)">
+            <img class="country-view-border-image" ng-src="{{border.flag}}"/>
+            <div class="country-text">{{border.name}}</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

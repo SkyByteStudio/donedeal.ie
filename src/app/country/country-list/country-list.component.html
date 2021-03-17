@@ -1,0 +1,14 @@
+<div class="flex-full-width country-line cursor" ng-repeat="country in $ctrl.countries" ng-click="$ctrl.viewCountry(country)">
+    <div class="flex-row">
+        <div>
+            <img class="country-image" ng-src="{{country.flag}}"/>
+        </div>
+        <div>
+            <div class="country-text">{{ country.name }}</div>
+            <div class="country-text">{{ country.capital }}</div>
+        </div>
+    </div>
+    <div class="flex-col">
+        <div>Population: {{country.population}}</div>
+    </div>
+</div>

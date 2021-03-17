@@ -1,0 +1,54 @@
+/**
+ * Shared styles
+ **/
+.center {
+  text-align: center;
+}
+
+.cursor {
+  cursor: pointer;  
+}
+
+/**
+ * Mixins 
+ **/
+
+@mixin flex {
+    display: flex;
+}
+
+@mixin flex-full-width {
+  display: flex;
+  flex: 1;
+}
+
+.flex-row {
+  @include flex();
+  flex-direction: row;
+}
+
+.flex-col {
+  @include flex();
+  flex-direction: column;
+}
+
+.flex-center {
+  @include flex();
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-justify-space-around {
+  @include flex();
+  justify-content: space-around;
+}
+
+.flex-justify-space-evenly {
+  @include flex();
+  justify-content: space-evenly;
+}
+
+.flex-justify-space-between {
+  @include flex();
+  justify-content: space-between;
+}
