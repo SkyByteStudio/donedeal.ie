@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "DoneDeal Test",
   "main": "index.js",
-  "private": true,
+  "private": false,
   "scripts": {
     "build": "npm run build:dev",
     "prebuild:dev": "npm run clean:dev",
